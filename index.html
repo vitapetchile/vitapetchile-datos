@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Copiar datos VitaPet</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #contenedor-datos {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 50px 80px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 3rem;       /* mucho más grande */
+    line-height: 1.5;
+    user-select: all;
+    max-width: 90vw;
+  }
+  button {
+    margin-top: 40px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 25px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 2.5rem;    /* botón más grande */
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div id="contenedor-datos">
+VitaPet Chile
+21214330-8
+Cuenta Vista
+111121214330
+Tenpo prepago
+vitapetchile@gmail.com
+</div>
+
+<button onclick="navigator.clipboard.writeText(document.getElementById('contenedor-datos').innerText)">📋 Copiar datos</button>
+
+</body>
+</html>
