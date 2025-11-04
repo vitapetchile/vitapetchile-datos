@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos Bancarios - VitaPet Chile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #f8f5ff; /* Fondo púrpura muy claro */
+      color: #2c1762; /* Texto oscuro púrpura */
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .contenedor {
+      border: 3px solid #9979d9;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 14px;
+      width: 360px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(153, 121, 217, 0.25);
+    }
+
+    h1 {
+      font-size: 1.7em;
+      margin-bottom: 25px;
+      color: #6d4cc5;
+    }
+
+    #datos {
+      font-size: 1.1em;
+      line-height: 1.8;
+      white-space: pre-line;
+      color: #3b2a7a;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background-color: #9979d9;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #7e5ed3;
+    }
+
+    img {
+      display: block;
+      margin: 25px auto 0;
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>DATOS BANCARIOS</h1>
+
+    <div id="datos">
+VitaPet Chile
+21214330-8
+vitapetchile@gmail.com
+Cuenta Vista
+111121214330
+Tenpo prepago
+    </div>
+
+    <button onclick="copiarDatos()">📋 Copiar datos</button>
+
+    <img src="IMG_1007.png" alt="Logo VitaPet Chile">
+  </div>
+
+  <script>
+    function copiarDatos() {
+      const texto = [
+        "VitaPet Chile",
+        "21214330-8",
+        "vitapetchile@gmail.com",
+        "Cuenta Vista",
+        "111121214330",
+        "Tenpo prepago"
+      ].join("\\n");
+
+      navigator.clipboard.writeText(texto).then(() => {
+        alert('✅ Datos copiados para transferencia');
+      });
+    }
+  </script>
+
+</body>
+</html>
